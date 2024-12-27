@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>تقرير نتائج التلاميذ</title>
+  <link href="/style.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <h1>تقرير نتائج التلاميذ</h1>
+    <p class="warning">
+      تنبيهات:
+      <br/>
+      - تأكد من كتابة الأقسام حسب ملف الإكسل.
+      <br/>
+      - أكتب الملاحظات حسب كل مجال.
+    </p>
+    <label for="num-classes">عدد الأقسام:</label>
+    <input id="num-classes" placeholder="أدخل عدد الأقسام" type="number"/>
+    <button id="generate-classes">إنشاء إدخالات الأقسام</button>
+    <div id="class-names-container"></div>
+    <h3>أدخل ملاحظات التقديرات:</h3>
+    <div id="grade-comments">
+      <label>أقل من 10: <input id="comment-0" type="text"/></label>
+      <label>من 10 إلى 12: <input id="comment-1" type="text"/></label>
+      <label>من 12 إلى 14: <input id="comment-2" type="text"/></label>
+      <label>من 14 إلى 16: <input id="comment-3" type="text"/></label>
+      <label>من 16 إلى 18: <input id="comment-4" type="text"/></label>
+      <label>من 18 إلى 20: <input id="comment-5" type="text"/></label>
+    </div>
+    <label for="excel-file">اختر ملف Excel:</label>
+    <input accept=".xlsx" id="excel-file" type="file"/>
+    <button id="generate-report">إنشاء التقرير</button>
+    <div id="progress-bar">
+      <div id="progress"></div>
+    </div>
+    <p id="status-message"></p>
+    <div id="results-container"></div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
