@@ -1,7 +1,0 @@
-flask
-matplotlib
-openpyxl
-pandas
-python-docx
-seaborn
-werkzeug
